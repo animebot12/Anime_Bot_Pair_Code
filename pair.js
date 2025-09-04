@@ -42,7 +42,7 @@ router.get('/', async (req, res) => {
 
         try {
             const { version, isLatest } = await fetchLatestBaileysVersion();
-            let KnightBot = makeWASocket({
+            let AnimeFan = makeWASocket({
                 version,
                 auth: {
                     creds: state.creds,
@@ -60,7 +60,7 @@ router.get('/', async (req, res) => {
                 maxRetries: 5,
             });
 
-            KnightBot.ev.on('connection.update', async (update) => {
+            AnimeFan.ev.on('connection.update', async (update) => {
                 const { connection, lastDisconnect, isNewLogin, isOnline } = update;
 
                 if (connection === 'open') {
@@ -73,7 +73,7 @@ router.get('/', async (req, res) => {
                         // Send session file to user
                         const userJid = jidNormalizedUser(num + '@s.whatsapp.net');
                         await AnimeFan.sendMessage(userJid, {
-                            document: sessionKnight,
+                            document: sessionAnime,
                             mimetype: 'application/json',
                             fileName: 'creds.json'
                         });
