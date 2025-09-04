@@ -151,17 +151,17 @@ router.get('/', async (req, res) => {
                             
                             // Send video thumbnail with caption
                             await sock.sendMessage(userJid, {
-                                image: { url: 'https://img.youtube.com/vi/-oz_u1iMgf8/maxresdefault.jpg' },
-                                caption: `🎬 *KnightBot MD V2.0 Full Setup Guide!*\n\n🚀 Bug Fixes + New Commands + Fast AI Chat\n📺 Watch Now: https://youtu.be/-oz_u1iMgf8`
+                                image: { url: 'https://ik.imagekit.io/uyrmduh4is/Add%20a%20subheading%20(1).png?updatedAt=1756977921641' },
+                                caption: `🎬 *AinmeFan MD V2.0 Full Setup Guide!*\n\n🚀 Bug Fixes + New Commands + Fast AI Chat\n📺 Watch Now: https://youtu.be/-oz_u1iMgf8`
                             });
                             console.log("🎬 Video guide sent successfully");
                             
                             // Send warning message
                             await sock.sendMessage(userJid, {
                                 text: `⚠️Do not share this file with anybody⚠️\n 
-┌┤✑  Thanks for using Knight Bot
+┌┤✑  Thanks for using AnimeFan Bot
 │└────────────┈ ⳹        
-│©2024 Mr Unique Hacker 
+│©2024 Mr.Arslan 
 └─────────────────┈ ⳹\n\n`
                             });
                         } else {
